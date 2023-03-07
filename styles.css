@@ -50,3 +50,31 @@ li {
     width: 40%;
     justify-self: center;
 }
+
+#header {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+#header > div {
+    border: 1px solid red;
+    display: flex;
+}
+
+form {
+    flex: 1;
+    margin-right: 10%;
+}
+
+input {
+    width: 100%;
+}
+
+#greeting {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#post-buttons  {
+    margin-left: auto;
+}
