@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    height: 100%;
+}
+
+#grid-container > * {
+    border: 1px solid black;
+}
+
+#sidebar {
+    grid-row: 1 / -1;
+}
