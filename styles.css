@@ -6,8 +6,11 @@
 
 :root {
     --accent-color: #14b8a6;
+    --complement-color: orange;
     --header-bg-color: white;
-    --content-bg-color: #e2e8f0;;
+    --content-bg-color: #e2e8f0;
+    --shadow-color: #94a3b8;
+    --para-color: #64748b;
 }
 
 html, body {
@@ -35,7 +38,7 @@ li {
 #sidebar {
     grid-row: 1 / -1;
     background-color: var(--accent-color);
-    color: white;
+    color: var(--content-bg-color);
 }
 
 #sidebar div {
@@ -69,7 +72,7 @@ h1 {
     background-color: var(--header-bg-color);
     font-weight: 700;
     padding-bottom: 8px;
-    box-shadow: 2px 2px 5px #94a3b8;
+    box-shadow: 2px 2px 5px var(--shadow-color);
     z-index: 1;
 }
 
@@ -84,7 +87,8 @@ h1 {
 }
 
 #sidebar img,
-#top-bar img {
+#top-bar img,
+.project img {
     height: 25px;
 }
 
@@ -108,7 +112,9 @@ input {
     height: 30px;
 }
 
-span {
+span,
+#main-content h2,
+.project h3 {
     font-size: 18px;
 }
 
@@ -161,18 +167,50 @@ button {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: var(--content-bg-color);
+    padding: 16px;
+    overflow: scroll;
 }
 
 #main-content > * {
-    border: 0px solid red;
+    padding: 16px;
+    border: 1px solid red;
 }
 
 #projects {
     grid-row: 1 / -1;
 }
 
+#main-content h2,
+h3 {
+    font-weight: 500;
+}
+
 #project-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+
+.project {
+    background-color: var(--header-bg-color);
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px var(--shadow-color);
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    border-left: 15px solid var(--complement-color);
+}
+
+.project p {
+    margin-top: 0;
+    color: var(--para-color);
+}
+
+.project div {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    padding-bottom: 16px;
 }
