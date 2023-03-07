@@ -71,7 +71,7 @@ h1 {
     grid-template-rows: 1fr 1fr;
     background-color: var(--header-bg-color);
     font-weight: 700;
-    padding-bottom: 8px;
+    padding: 0px 24px 8px;
     box-shadow: 2px 2px 5px var(--shadow-color);
     z-index: 1;
 }
