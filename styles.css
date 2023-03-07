@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    font-weight: 500;
 }
 
 #grid-container {
@@ -19,4 +31,17 @@ html, body {
 
 #sidebar {
     grid-row: 1 / -1;
+    background-color: #14b8a6;
+    color: white;
+}
+
+#sidebar div {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#sidebar img {
+    width: 40%;
+    justify-self: center;
 }
