@@ -92,7 +92,8 @@ h1 {
     height: 25px;
 }
 
-#header img[alt="Profile Picture"] {
+#header img[alt="Profile Picture"],
+#trending img {
     height: 50px;
     width: 50px;
     object-fit: cover;
@@ -173,7 +174,6 @@ button {
 
 #main-content > * {
     padding: 16px;
-    border: 1px solid red;
 }
 
 #projects {
@@ -193,7 +193,8 @@ h3 {
 }
 
 .project,
-#announcements ul {
+#announcements ul,
+#trending ul {
     background-color: var(--header-bg-color);
     border-radius: 15px;
     box-shadow: 1px 1px 5px var(--shadow-color);
@@ -207,14 +208,18 @@ h3 {
 }
 
 .project p,
-#announcements p {
+#announcements p,
+h4 {
     margin-top: 0;
     color: var(--para-color);
 }
 
-#announcements p {
+#announcements p,
+#trending h3,
+#trending h4 {
     font-weight: 300;
     font-size: 14px;
+    margin: 0;
 }
 
 .project div {
@@ -229,4 +234,13 @@ hr {
     height: 1px;
     width: 100%;
     z-index: 10;
+    margin-top: 16px;
+}
+
+#trending li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 80px 1fr;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
