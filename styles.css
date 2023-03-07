@@ -7,6 +7,7 @@
 :root {
     --accent-color: #14b8a6;
     --header-bg-color: white;
+    --content-bg-color: #e2e8f0;;
 }
 
 html, body {
@@ -29,10 +30,6 @@ li {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
     height: 100%;
-}
-
-#grid-container > * {
-    border: 1px solid black;
 }
 
 #sidebar {
@@ -72,6 +69,8 @@ h1 {
     background-color: var(--header-bg-color);
     font-weight: 700;
     padding-bottom: 8px;
+    box-shadow: 2px 2px 5px #94a3b8;
+    z-index: 1;
 }
 
 #header > div {
@@ -103,7 +102,7 @@ form {
 
 input {
     width: 100%;
-    background-color: #e2e8f0;
+    background-color: var(--content-bg-color);
     border: none;
     border-radius: 50px;
     height: 30px;
@@ -127,11 +126,18 @@ span {
 #greeting {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    align-items: center;
 }
 
 #greeting div:nth-child(2) {
-    font-size: 24px;
+    font-size: 18px;
 }
+
+@media screen and (min-width: 950px) {
+    #greeting div:nth-child(2) {
+      font-size: 24px;
+    }
+  }
 
 #post-buttons  {
     margin-left: auto;
@@ -154,10 +160,11 @@ button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: var(--content-bg-color);
 }
 
 #main-content > * {
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 #projects {
