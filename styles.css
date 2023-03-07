@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,6 +6,7 @@
 
 :root {
     --accent-color: #14b8a6;
+    --header-bg-color: white;
 }
 
 html, body {
@@ -47,27 +48,65 @@ li {
 }
 
 #sidebar img {
-    width: 40%;
     justify-self: center;
 }
 
 #header {
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--header-bg-color);
+    font-weight: 700;
+    padding-bottom: 8px;
 }
 
 #header > div {
-    border: 1px solid red;
     display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#top-bar {
+    padding: 16px;
+}
+
+#sidebar img,
+#top-bar img {
+    height: 25px;
+}
+
+#header img[alt="Profile Picture"] {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 form {
     flex: 1;
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
 input {
     width: 100%;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 50px;
+    height: 30px;
+}
+
+span {
+    font-size: 18px;
+}
+
+#lower-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#header #lower-bar img {
+    height: 75px;
+    width: 75px;
+    flex-shrink: 0;
 }
 
 #greeting {
@@ -75,8 +114,25 @@ input {
     grid-template-rows: 1fr 1fr;
 }
 
+#greeting div:nth-child(2) {
+    font-size: 24px;
+}
+
 #post-buttons  {
     margin-left: auto;
+    display: flex;
+    gap: 16px;
+}
+
+button {
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--header-bg-color);
+    height: 40px;
+    width: 90px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 #main-content {
