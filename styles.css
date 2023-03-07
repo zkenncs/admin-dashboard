@@ -192,19 +192,29 @@ h3 {
     grid-gap: 16px;
 }
 
-.project {
+.project,
+#announcements ul {
     background-color: var(--header-bg-color);
     border-radius: 15px;
     box-shadow: 1px 1px 5px var(--shadow-color);
     padding: 16px 24px;
     display: flex;
     flex-direction: column;
+}
+
+.project {
     border-left: 15px solid var(--complement-color);
 }
 
-.project p {
+.project p,
+#announcements p {
     margin-top: 0;
     color: var(--para-color);
+}
+
+#announcements p {
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .project div {
@@ -213,4 +223,10 @@ h3 {
     justify-content: flex-end;
     gap: 24px;
     padding-bottom: 16px;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    z-index: 10;
 }
