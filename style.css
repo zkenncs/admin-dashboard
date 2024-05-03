@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+}
+
+#dashboard-grid {
+    height: 100vh;
+    grid-template: 1fr 4fr / 1fr 4fr;
+}
+
+header {
+
+}
+
+#sidenav {
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+/* FOR DEBUGGING */
+#dashboard-grid, #dashboard-grid > * {
+    border: 1px solid red;
+}
