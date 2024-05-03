@@ -19,8 +19,23 @@ h1 {
     grid-template: 1fr 4fr / 1fr 4fr;
 }
 
-header {
+#header-upper, #header-lower {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+}
 
+#header-upper form {
+    flex: 1;
+}
+
+#header-upper form input {
+    width: 80%;
+}
+
+#header-greeting {
+    flex: 1;
 }
 
 #sidenav {
