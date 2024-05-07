@@ -1,5 +1,6 @@
 :root {
     --accent-color: #14b8a6;
+    --accent-complement: #b8146e;
     --display-text-color: white;
     --text-color: black;
     --subtext-color: #e2e8f0;
@@ -62,7 +63,7 @@ p {
 
 #dashboard-grid {
     height: 100%;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 4fr / 1fr 5fr;
 }
 
 header {
@@ -79,7 +80,7 @@ header {
     gap: 16px;
 }
 
-header img:not(.profile-pic) {
+img:not(.profile-pic) {
     height: 1.5em;
 }
 
@@ -121,7 +122,6 @@ header img:not(.profile-pic) {
 
 #sidenav img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(300deg) brightness(104%) contrast(101%);
-    height: 1.5em;
 }
 
 .sidenav-field a, .sidenav-field:first-child {
@@ -142,6 +142,13 @@ header img:not(.profile-pic) {
 
 #main-content {
     grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 32px 24px;
+    gap: 24px;
+    background-color: var(--subtext-color);
+}
+
+#main-content h2 {
+    font-size: 1.25rem;
 }
 
 #main-projects {
@@ -149,11 +156,29 @@ header img:not(.profile-pic) {
 }
 
 #main-projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 12px;
+    gap: 24px;
+}
+
+.project-card {
+    padding: 32px 24px;
+    border-radius: 8px;
+    background-color: var(--display-text-color);
+    box-shadow: 0 7px 10px -2px rgba(150,170,180,0.5);
+    border-left: 8px solid var(--accent-complement);
 }
 
 .project-card p {
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+}
+
+.project-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: min(24px, 5%);
 }
 
 .announcement-item p, .project-card p {
