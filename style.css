@@ -153,6 +153,7 @@ img:not(.profile-pic) {
 
 #main-content p {
     font-size: 0.85rem;
+    color: gray;
 }
 
 #main-content h2 {
@@ -169,15 +170,17 @@ img:not(.profile-pic) {
 
 #main-projects {
     grid-area: 1 / 1 / -1 / -2;
+    display: flex;
+    flex-direction: column;
 }
 
 #main-projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
+    flex: 1;
 }
 
 .project-card {
-    
     border-left: 8px solid var(--accent-complement);
 }
 
@@ -228,10 +231,4 @@ img:not(.profile-pic) {
 
 .trending-item .profile-pic {
     flex-shrink: 0;
-}
-
-
-/* FOR DEBUGGING */
- #dashboard-grid > *, #main-content > * {
-    border: 1px solid red;
 }
